@@ -20,8 +20,10 @@ create an empty document called "Caddyfile" (upper-case 'C')
 write the following in the Caddyfile to use HTTP/2:
 
 your.domain { 
+
 	tls your.email # (can be replaced with "internal" to use it locally but can only be reached #using curl, browsers would raise an error)
    	file_server
+	
 }
 
 to use HTTP/3 add the following above everything else in the Caddyfile:
