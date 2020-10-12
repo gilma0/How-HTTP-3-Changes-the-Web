@@ -18,6 +18,7 @@ create an empty document called "Caddyfile" (upper-case 'C')
 * to use in the public network you must assign a domain to get a certificate, use a free DNS to get one
 
 write the following in the Caddyfile to use HTTP/2:
+
 your.domain { 
 	tls your.email # (can be replaced with "internal" to use it locally but can only be reached #using curl, browsers would raise an error)
    	file_server
@@ -26,7 +27,9 @@ your.domain {
 to use HTTP/3 add the following above everything else in the Caddyfile:
 
 {
+
 	experimental_http3
+	
 }
 
 after editing the Caddyfile open the terminal in the folder containing the index.html file and the Caddyfile document you created and use the command: sudo caddy run --watch
